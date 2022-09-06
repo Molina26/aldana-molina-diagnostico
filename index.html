@@ -16,7 +16,7 @@
 
         <div class="row">
             <div class="col-12">
-                <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modalRegister">
                     Registrar
                 </button>
 
@@ -42,7 +42,7 @@
 
 
     <!-- Modal -->
-    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal fade" id="modalRegister" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div class="modal-dialog">
             <div class="modal-content">
                 <div class="modal-header">
@@ -52,18 +52,53 @@
                 <div class="modal-body">
                     <div class="mb-3">
                         <label for="exampleFormControlInput1" class="form-label">Name</label>
-                        <input type="text" class="form-control" id="nameInput"
-                            placeholder="">
+                        <input type="text" class="form-control" id="nameInputRegister" placeholder="">
                     </div>
                     <div class="mb-3">
-                        <label for="exampleFormControlInput1" class="form-label">Job</label>
-                        <input type="text" class="form-control" id="jobInput"
-                            placeholder="">
+                        <label for="lastNameInputRegister" class="form-label">Last name</label>
+                        <input type="text" class="form-control" id="lastNameInputRegister" placeholder="">
+                    </div>
+                    <div class="mb-3">
+                        <label for="exampleFormControlInput1" class="form-label">Email</label>
+                        <input type="email" class="form-control" id="emailInputRegister" placeholder="">
                     </div>
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
                     <button type="button" class="btn btn-primary" onclick="registerUser();">Save</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="modalUpdate" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Update user</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <input type="hidden" id="rowIdValue">
+                    <input type="hidden" id="avatarInputUpdate">
+                    <input type="hidden" class="form-control" id="idInputUpdate" placeholder="">
+
+                    <div class="mb-3">
+                        <label for="exampleFormControlInput1" class="form-label">Name</label>
+                        <input type="text" class="form-control" id="nameInputUpdate" placeholder="">
+                    </div>
+                    <div class="mb-3">
+                        <label for="lastNameInputRegister" class="form-label">Last name</label>
+                        <input type="text" class="form-control" id="lastNameInputUpdate" placeholder="">
+                    </div>
+                    <div class="mb-3">
+                        <label for="exampleFormControlInput1" class="form-label">Email</label>
+                        <input type="email" class="form-control" id="emailInputUpdate" placeholder="">
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary" onclick="updateUser();">Save</button>
                 </div>
             </div>
         </div>
